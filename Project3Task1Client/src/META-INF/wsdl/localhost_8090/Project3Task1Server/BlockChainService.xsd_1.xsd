@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.1-b419 (branches/2.3.1.x-7937; 2014-08-04T08:11:03+0000) JAXWS-RI/2.2.10-b140803.1500 JAXWS-API/2.2.11 JAXB-RI/2.2.10-b140802.1033 JAXB-API/2.2.12-b140109.1041 svn-revision#unknown. --><xs:schema xmlns:tns="http://psdesai.andrew.cmu.edu/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://psdesai.andrew.cmu.edu/">
+
+<xs:element name="addBlock" type="tns:addBlock"/>
+
+<xs:element name="createGenesisBlock" type="tns:createGenesisBlock"/>
+
+<xs:element name="isChainValid" type="tns:isChainValid"/>
+
+<xs:element name="isChainValidResponse" type="tns:isChainValidResponse"/>
+
+<xs:element name="viewBlockChain" type="tns:viewBlockChain"/>
+
+<xs:element name="viewBlockChainResponse" type="tns:viewBlockChainResponse"/>
+
+<xs:complexType name="isChainValid">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="isChainValidResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addBlock">
+<xs:sequence>
+<xs:element name="difficulty" type="xs:int"/>
+<xs:element name="data" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="viewBlockChain">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="viewBlockChainResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createGenesisBlock">
+<xs:sequence/>
+</xs:complexType>
+</xs:schema>
